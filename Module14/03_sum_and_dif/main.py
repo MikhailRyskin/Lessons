@@ -30,3 +30,5 @@ print('Разность суммы чисел и кол-ва цифр:', sum_all
 sum_digit = sum_digits(n)
 print('Сумма цифр:', sum_digit)
 print('Разность суммы цифр и кол-ва цифр:', sum_digit - number_digit)
+
+# зачёт!

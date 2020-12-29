@@ -33,3 +33,5 @@ b_backward = number_backward(int(integer_str)) + '.' + number_backward(int(fract
 print('Первое число наоборот: ', a_backward)
 print('Второе число наоборот: ', b_backward)
 print('Сумма:', float(a_backward) + float(b_backward))
+
+# зачёт!

@@ -19,3 +19,5 @@ else:
     k = y_diff / x_diff
     b = y2 - k * x2
     print("y = ", k, " * x + ", b)
+
+# зачёт!
