@@ -50,3 +50,5 @@ print('Года от', a, 'до', b, 'с тремя одинаковыми ци�
 for year in range(a, b + 1):
     if three_of_four(str(year)):
         print(year)
+
+# зачёт!

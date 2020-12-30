@@ -12,3 +12,5 @@ def min_divider(number):
 
 n = int(input('Введите число: '))
 print('Наименьший делитель, отличный от единицы:', min_divider(n))
+
+# зачёт!
