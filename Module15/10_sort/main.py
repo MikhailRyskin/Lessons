@@ -22,11 +22,15 @@
 # print(d)
 
 n = int(input('Введите размер списка: '))
+
 list_1 = []
+
 for _ in range(n):
     num = int(input('Введите число: '))
     list_1.append(num)
+
 print('Изначальный список:', list_1)
+
 while True:
     flag = True
     for i in range(n - 1):
@@ -36,3 +40,5 @@ while True:
     if flag:
         break
 print('Отсортированный список:', list_1)
+
+# зачёт!
