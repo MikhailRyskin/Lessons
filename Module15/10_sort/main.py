@@ -1,7 +1,7 @@
 # a = [1, 5, 3]
 # b = [1, 5, 1, 5]
 # c = [1, 3, 1, 5, 3, 3]
-# for i in b:
+# for ind indn b:
 #     a.append(i)
 # t = 0
 # for i in a:
