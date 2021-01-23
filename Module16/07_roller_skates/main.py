@@ -27,3 +27,5 @@ for man_size in people_list:
             people_count += 1
             break
 print('Наибольшее кол-во людей, которые могут взять ролики:', people_count)
+
+# зачёт!
