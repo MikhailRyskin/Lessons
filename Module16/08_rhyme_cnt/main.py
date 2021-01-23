@@ -18,3 +18,5 @@ while len(people_list) > 1:
     while start_poz > curr_size:
         start_poz -= curr_size
 print('\nОстался человек под номером', *people_list)
+
+# зачёт!
