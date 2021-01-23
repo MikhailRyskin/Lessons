@@ -11,3 +11,5 @@ for ind in range(len(shop)):
         items_amount += shop[ind][1]
 print('Кол-во деталей -', items_count)
 print('Общая стоимость -', items_amount)
+
+# зачёт!
