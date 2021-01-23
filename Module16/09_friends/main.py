@@ -26,5 +26,10 @@ for ind in range(num_receipts):
     friends_list[to_whom - 1] += how_much
     friends_list[from_whom - 1] -= how_much
 print('\nБаланс друзей:')
+# , если используем в коде переменную цикла, то обязательно должны назвать её так,
+#  чтобы название отражало суть её содержания.
+
 for i in range(num_friends):
     print(i + 1, ':', friends_list[i])
+
+# зачёт!
