@@ -10,3 +10,5 @@ class_2 = list(range(162, 181, 3))
 class_1.extend(class_2)
 sort_choice(class_1)
 print('Отсортированный список:', class_1)
+
+# зачёт!
