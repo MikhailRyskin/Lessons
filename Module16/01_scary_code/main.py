@@ -14,3 +14,5 @@ main_list.extend(list_c)
 print('Кол-во цифр 5 при первом объединении:', count_5)
 print('Кол-во цифр 3 при втором объединении:', main_list.count(3))
 print('Итоговый список:', main_list)
+
+# зачёт!
