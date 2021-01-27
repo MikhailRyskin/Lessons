@@ -12,3 +12,5 @@ for letter in text:
             ind -= 33
         encrypted_text += alphabet[ind]
 print('Зашифрованное сообщение:', encrypted_text)
+
+# зачёт!
