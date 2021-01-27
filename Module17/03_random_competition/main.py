@@ -6,3 +6,5 @@ winner_list = [(team_1[ind] if team_1[ind] > team_2[ind] else team_2[ind]) for i
 print('Первая команда:', team_1)
 print('Вторая команда:', team_2)
 print('Победители тура:', winner_list)
+
+# зачёт!
