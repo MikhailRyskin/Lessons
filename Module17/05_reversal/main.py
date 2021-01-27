@@ -10,3 +10,5 @@ for ind in range(len(text)):
         else:
             finish_ind = ind
 print(text[finish_ind - 1:start_ind:-1])
+
+# зачёт!
