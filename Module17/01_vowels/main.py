@@ -5,3 +5,4 @@ print('Список гласных букв:', vowels_list)
 print('Длина списка:', len(vowels_list))
 
 # зачёт!
+# зачёт!
