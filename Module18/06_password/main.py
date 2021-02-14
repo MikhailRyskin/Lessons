@@ -12,3 +12,5 @@ while True:
     else:
         print('Это надёжный пароль!')
         break
+
+# зачёт!

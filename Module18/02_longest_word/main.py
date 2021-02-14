@@ -6,3 +6,5 @@ for word in text_list:
         max_length = len(word)
         longest_word = word
 print(f'Самое длинное слово "{longest_word}", его длина - {max_length} букв.')
+
+# зачёт!

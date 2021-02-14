@@ -11,3 +11,5 @@ while i_symbol < len(data):
     i_symbol += 1
 compressed = ''.join(compressed_data)
 print('Закодированная строка: ', compressed)
+
+# зачёт!
