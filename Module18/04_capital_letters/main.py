@@ -1,4 +1,3 @@
-text_list = input('Введите строку: ').split()  # TODO, вместо split можно сразу использовать title =)
-result = ' '.join([word.title() for word in text_list])
-print('Результат:', result)
-
+text = input('Введите строку: ').title()  # TODO, вместо split можно сразу использовать title =)
+print('Результат:', text)
+# TODO переделал сразу на title. Да, тут split, конечно, лишний был.
