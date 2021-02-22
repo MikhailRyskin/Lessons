@@ -23,5 +23,11 @@ store = {
         {'quantity': 43, 'price': 97},
     ],
 }
-
-# TODO здесь писать код
+codes_dict = {goods[item]: item for item in goods}
+for code in store:
+    total_quantity = 0
+    value = 0
+    for i in range(len(store[code])):
+        total_quantity += store[code][i]['quantity']
+        value += store[code][i]['quantity'] * store[code][i]['price']
+    print(f'{codes_dict[code]} - {total_quantity} шт., стоимость {value} руб.')
