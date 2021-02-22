@@ -1,9 +1,9 @@
-number_countries = int(input('Кол-во стран: '))  # TODO
+number_countries = int(input('Кол-во стран: '))  #
 cities_dict = {}
 print('Введите страну и 3 города этой страны.')
 # Если переменную цикла используем в коде, её необходимо назвать так, чтобы название отражало суть содержания.
 #  "i", "n" и "j" не отражают =)
-# TODO исправил названия переменных
+#  исправил названия переменных
 
 for country_index in range(1, number_countries + 1):
     country_cities = input(f'{country_index} страна: ').split()
@@ -17,3 +17,5 @@ for city_index in range(1, 4):
         print(f'Город {city} расположен в стране {country}.')
     else:
         print(f'По городу {city} данных нет.')
+
+# зачёт!

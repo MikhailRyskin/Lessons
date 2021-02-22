@@ -29,8 +29,10 @@ for code in store:
     value = 0
     # в этом цикле лучше идти сразу по store[code], без len.
     #  Это позволит сократить количество срезов.
-    # TODO исправил
+    #  исправил
     for quantity_price in store[code]:
         total_quantity += quantity_price['quantity']
         value += quantity_price['quantity'] * quantity_price['price']
     print(f'{codes_dict[code]} - {total_quantity} шт., стоимость {value} руб.')
+
+# зачёт!
