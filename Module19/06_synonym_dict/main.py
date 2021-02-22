@@ -1,5 +1,7 @@
 n = int(input('Введите количество пар слов: '))
 couples_list = []
+# TODO, Если переменную цикла используем в коде, её необходимо назвать так, чтобы название отражало суть содержания.
+#  "i", "n" не отражают =)
 for i in range(1, n + 1):
     couple_words = input(f'{i} пара: ').title().split(' - ')
     couples_list.append(couple_words)
@@ -15,3 +17,4 @@ while True:
         break
     else:
         print('Такого слова в словаре нет.')
+

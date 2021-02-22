@@ -19,3 +19,5 @@ for sym in hist_dict:
 print('Инвертированный словарь частот:')
 for quantity in sorted(invert_dict.keys()):
     print(quantity, ':', invert_dict[quantity])
+
+# зачёт!

@@ -13,3 +13,5 @@ while True:
         elif answer == 'Нет':
             possible_numbers.difference_update(proposed_numbers)
 print('Артём мог загадать следующие числа:', *possible_numbers)
+
+# зачёт!

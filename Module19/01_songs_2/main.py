@@ -15,3 +15,5 @@ for ind in range(1, numb_songs + 1):
     song_title = input(f'Название {ind} песни: ')
     total_time += violator_songs.get(song_title, 0)
 print(f'Общее время звучания песен: {round(total_time, 2)} минут')
+
+# зачёт!

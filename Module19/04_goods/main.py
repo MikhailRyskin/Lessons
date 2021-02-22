@@ -27,6 +27,8 @@ codes_dict = {goods[item]: item for item in goods}
 for code in store:
     total_quantity = 0
     value = 0
+    # TODO, в этом цикле лучше идти сразу по store[code], без len.
+    #  Это позволит сократить количество срезов.
     for i in range(len(store[code])):
         total_quantity += store[code][i]['quantity']
         value += store[code][i]['quantity'] * store[code][i]['price']

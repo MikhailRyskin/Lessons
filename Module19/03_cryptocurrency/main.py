@@ -53,3 +53,5 @@ data['tokens'][1]['sec_token_info']['total_price'] = data['tokens'][1]['sec_toke
 print('После обработки')
 print(data.keys())
 print(data.values())
+
+# зачёт!
