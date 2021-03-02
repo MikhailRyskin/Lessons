@@ -16,3 +16,5 @@ input_element = input('Введите элемент: ')
 
 out_tuple = func_2003(input_tuple, input_element)
 print(out_tuple)
+
+# зачёт!

@@ -14,3 +14,5 @@ for surname_name, age in people.items():
     if surname == inp_surname or surname == inp_fem_surname:
         total_age += age
 print('Общий возраст: ', total_age)
+
+# TODO, пожалуйста добавьте вывод ФИО и возвраста людей, чьи фамилии были указаны во вводе пользователя.

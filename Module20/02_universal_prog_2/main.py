@@ -29,3 +29,5 @@ crypt_list = cryptographic_func(input_data)
 print(crypt_list)
 crypt_list_1 = cryptographic_func(input_data_1)
 print(crypt_list_1)
+
+# зачёт!

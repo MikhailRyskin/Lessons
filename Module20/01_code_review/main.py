@@ -56,3 +56,5 @@ for students_id, students_data in students.items():
 students_interests, surnames_length = interests_surnames_length(students)
 print('Полный список интересов всех студентов:', students_interests)
 print('Общая длина всех фамилий студентов:', surnames_length)
+
+# зачёт!

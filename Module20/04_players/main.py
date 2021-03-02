@@ -7,3 +7,6 @@ new_list = []
 for key, value in players.items():
     new_list.append(key + value)
 print(new_list)
+
+# было бы здорово решить генератором списков =)
+# зачёт!
