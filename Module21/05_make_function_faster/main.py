@@ -1,9 +1,15 @@
+def factorial(number):
+    if number == 1:
+        return 1
+    return number * factorial(number - 1)
+
+
 def calculating_math_func(data):
-    result = 1
-    for index in range(1, data + 1):
-        result *= index
+    result = factorial(data)
     result /= data ** 3
     result = result ** 10
     return result
 
-# TODO оптимизировать функцию
+
+input_number = int(input('Введите число: '))
+print(calculating_math_func(input_number))
