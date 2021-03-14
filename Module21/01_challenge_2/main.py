@@ -8,3 +8,4 @@ my_number = int(input('Введите число: '))
 all_numbers(my_number)
 
 # зачёт!
+# зачёт!
