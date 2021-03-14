@@ -11,7 +11,7 @@ nice_list = [1, 2, [3, 4], [[5, 6, 7], [8, 9, 10]],
 #         else:
 #             new_list.append(item)
 #     return new_list
-# TODO убрал второй параметр
+#  убрал второй параметр
 
 def opening_list(in_list):
     new_list = []
@@ -25,3 +25,5 @@ def opening_list(in_list):
 
 one_nice_list = opening_list(nice_list)
 print(one_nice_list)
+
+# зачёт!
