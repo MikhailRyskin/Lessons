@@ -17,3 +17,7 @@ zip_list_2 = super_zip(data_3, data_4)
 print(*zip_list_2)
 zip_list_3 = super_zip(data_5, data_2)
 print(*zip_list_3)
+
+
+# TODO "сделайте так, чтобы программа работала с любыми итерируемыми типами данных"
+#  функция super_zip должна возвращать итерируемый объект

@@ -1,3 +1,5 @@
+# TODO, такой параметр лишний, давйте сделаем его переменной в функции.
+#  Чтобы пользователь не мог ввести параметр и сломать наш код
 def opening_list(in_list, new_list=[]):
     for item in in_list:
         if isinstance(item, list):
@@ -14,7 +16,7 @@ def my_sum(in_list):
     return summ
 
 
-list_1 = [[1, 2, [3]], [1], 3]
+list_1 = [[1, 2, [3]], [1], 3, [[[1]]]]
 print(my_sum(list_1))
 
 list_2 = (1, 2, 3, 4, 5)

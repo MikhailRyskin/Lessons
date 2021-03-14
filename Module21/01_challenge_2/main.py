@@ -6,3 +6,5 @@ def all_numbers(number):
 
 my_number = int(input('Введите число: '))
 all_numbers(my_number)
+
+# зачёт!

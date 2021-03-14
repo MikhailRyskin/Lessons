@@ -13,3 +13,5 @@ def calculating_math_func(data):
 
 input_number = int(input('Введите число: '))
 print(calculating_math_func(input_number))
+
+# зачёт!

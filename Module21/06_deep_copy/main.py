@@ -1,5 +1,4 @@
-# from pprint import pprint
-
+from pprint import pprint
 
 site = {
     'html': {
@@ -31,5 +30,7 @@ for _ in range(site_counter):
     product = input('\nВведите название продукта для нового сайта: ')
     print(f'\nСайт для {product}: ')
     insert_model(site, product)
-    print(site)
-    # pprint(site)
+    # print(site)
+    pprint(site)
+
+# зачёт!

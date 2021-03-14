@@ -35,3 +35,5 @@ if value:
     print(value)
 else:
     print('Нет такого ключа')
+
+# зачёт!
