@@ -1,5 +1,12 @@
 import os
 
+
+def write_in_file(file_path, content):
+    file = open(file_path, 'w', encoding='utf8')
+    file.write(content)
+    file.close()
+
+
 text = input('Введите строку: ')
 
 dir_path = input('Куда хотите сохранить документ?'
@@ -14,20 +21,14 @@ while not os.path.exists(abs_dir_path):
 
 file_name = input('Введите имя файла: ')
 abs_file_path = os.path.join(abs_dir_path, file_name + '.txt')
-# print(abs_file_path)
 
-
-# TODO, предлагаю подумать, как сократить количество следующего кода.
+# предлагаю подумать, как сократить количество следующего кода.
 #  Возможно, стоит создать функцию для записи текста в файл.
 if not os.path.exists(abs_file_path):
-    out_file = open(abs_file_path, 'w', encoding='utf8')
-    out_file.write(text)
-    out_file.close()
+    write_in_file(abs_file_path, text)
     print('Файл успешно сохранён!')
 else:
     rewriting = input('Вы действительно хотите перезаписать файл? ')
     if rewriting == 'да':
-        out_file = open(abs_file_path, 'w', encoding='utf8')
-        out_file.write(text)
-        out_file.close()
+        write_in_file(abs_file_path, text)
         print('Файл успешно перезаписан!')

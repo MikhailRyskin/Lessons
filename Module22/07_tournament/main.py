@@ -16,5 +16,5 @@ for number, content in enumerate(second_tour_list):
     out_line = f'{number + 1}) {content[1]} {content[0]}\n'
     tour_2_file.write(out_line)
 tour_1_file.close()
-
+tour_2_file.close()
 # зачёт!
