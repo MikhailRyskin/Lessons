@@ -32,3 +32,5 @@ else:
     if rewriting == 'да':
         write_in_file(abs_file_path, text)
         print('Файл успешно перезаписан!')
+
+# зачёт!
