@@ -16,3 +16,5 @@ for dirpath, dirnames, filenames in os.walk(check_path):
 print('Размер каталога (в Кб):', total_size / 1024)
 print('Количество подкаталогов:', total_dir)
 print('Количество файлов:', total_files)
+
+# зачёт!

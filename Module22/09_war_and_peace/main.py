@@ -1,7 +1,6 @@
 from collections import defaultdict
 import zipfile
 
-
 file_zip = zipfile.ZipFile('voyna-i-mir.zip', 'r')
 file_zip.extractall()
 file = open('voyna-i-mir.txt', 'r', encoding='utf8')
@@ -28,3 +27,5 @@ for quantity in sorted(quantity_stat.keys(), reverse=True):
 
 file.close()
 file_zip.close()
+
+# зачёт!

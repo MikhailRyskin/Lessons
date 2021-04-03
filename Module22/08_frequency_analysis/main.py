@@ -1,6 +1,5 @@
 from collections import defaultdict
 
-
 text_file = open('text.txt', 'r', encoding='utf8')
 letters_stat = defaultdict(int)
 total_letters = 0
@@ -26,3 +25,5 @@ for quantity in sorted(quantity_stat.keys(), reverse=True):
 
 text_file.close()
 analysis_file.close()
+
+# зачёт!

@@ -22,3 +22,5 @@ for line in in_file:
     line_number += 1
 in_file.close()
 out_file.close()
+
+# зачёт!

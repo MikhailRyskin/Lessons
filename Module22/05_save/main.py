@@ -16,6 +16,9 @@ file_name = input('Введите имя файла: ')
 abs_file_path = os.path.join(abs_dir_path, file_name + '.txt')
 # print(abs_file_path)
 
+
+# TODO, предлагаю подумать, как сократить количество следующего кода.
+#  Возможно, стоит создать функцию для записи текста в файл.
 if not os.path.exists(abs_file_path):
     out_file = open(abs_file_path, 'w', encoding='utf8')
     out_file.write(text)

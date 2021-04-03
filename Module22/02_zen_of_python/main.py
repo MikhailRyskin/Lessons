@@ -6,3 +6,5 @@ file.close()
 
 for line in text_list[::-1]:
     print(line, end='')
+
+# зачёт!

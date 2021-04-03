@@ -9,3 +9,5 @@ for number in numbers:
 out_file = open('answer.txt', 'w')
 out_file.write(str(summ))
 out_file.close()
+
+# зачёт!
