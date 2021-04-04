@@ -11,3 +11,4 @@ out_file.write(str(summ))
 out_file.close()
 
 # зачёт!
+# зачёт!
