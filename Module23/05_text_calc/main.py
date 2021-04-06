@@ -25,6 +25,8 @@ with open('calc.txt', 'r') as file:
         line = line[:-1]
         try:
             result += calc(line)
+        # TODO, предлагаю попробовать вызывать свою исключение с нужным текстом
+        #  В таком случае, условный оператор получится лишний и наши ошибки можно будет ловить группой.
         except ValueError as exc:
             if 'unpack' in exc.args[0]:
                 print(f'Нет хватает операции или операндов в строке: {line}')

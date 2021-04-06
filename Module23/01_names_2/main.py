@@ -4,6 +4,8 @@ with open('people.txt', 'r', encoding='utf8') as people_file, \
     line_number = 0
     for line in people_file:
         line_number += 1
+        # TODO, вместо среза, предлагаю попробовать использовать строковой метод rstrip()
+        #  Дело в том, что методы более оптимизированы для работы со списками. Получится немного ускорить код.
         line = line[:-1]
         try:
             if len(line) < 3:
