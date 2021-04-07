@@ -17,13 +17,13 @@ with open('registrations.txt', 'r', encoding='utf8') as reg_file,\
         open('registrations_good.log', 'w+', encoding='utf8') as good_file,\
         open('registrations_bad.log', 'w+', encoding='utf8') as bad_file:
     for line in reg_file:
-        # TODO, вместо среза, предлагаю попробовать использовать строковой метод rstrip()
+        # вместо среза, предлагаю попробовать использовать строковой метод rstrip()
         #  Дело в том, что методы более оптимизированы для работы со списками. Получится немного ускорить код.
-        line = line[:-1]
+        line = line.rstrip()
         try:
-            # TODO, условный оператор лишний, т.к. если функция вызовет исключение, то запись в файл не произойдёт.
-            if data_validation(line):
-                good_file.write(line + '\n')
+            # условный оператор лишний, т.к. если функция вызовет исключение, то запись в файл не произойдёт.
+            data_validation(line)
+            good_file.write(line + '\n')
         except (IndexError, ValueError, NameError, SyntaxError) as exc:
             except_content = f'в записи {line} {exc}\n'
             bad_file.write(except_content)
