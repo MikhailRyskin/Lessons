@@ -18,3 +18,4 @@ with open('people.txt', 'r', encoding='utf8') as people_file, \
 print('Всего символов в корректных строках:', total_symbols)
 
 # зачёт!
+# зачёт!
