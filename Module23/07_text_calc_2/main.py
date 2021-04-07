@@ -51,3 +51,5 @@ with open('calc.txt', 'r') as file:
                 fix_flag = False
                 # предлагаю попробовать решить без рекурсии.
 print(f'Результат вычисления: {result}')
+
+# зачёт!

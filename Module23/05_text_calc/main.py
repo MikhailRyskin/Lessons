@@ -34,3 +34,5 @@ with open('calc.txt', 'r') as file:
         except (IndexError, ValueError) as exc:
             print(exc)
 print(f'Результат вычисления: {result}')
+
+# зачёт!

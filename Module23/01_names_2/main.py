@@ -16,3 +16,5 @@ with open('people.txt', 'r', encoding='utf8') as people_file, \
             print(exc)
             errors_file.write(str(exc) + '\n')
 print('Всего символов в корректных строках:', total_symbols)
+
+# зачёт!
