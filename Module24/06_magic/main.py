@@ -114,3 +114,5 @@ word = 'Слово'
 print(Water(), '+', word, '=', Water() + word)
 number = 543
 print(Air(), '+', number, '=', Air() + number)
+
+# зачёт!

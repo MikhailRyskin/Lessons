@@ -77,12 +77,11 @@ class House:
 citizens = [
     Man(name='Артём'),
     Man(name='Саша'),
-    ]
+]
 
 my_sweet_home = House()
 for citizen in citizens:
     citizen.go_to_the_house(house=my_sweet_home)
-
 
 print('В доме живут:')
 for roomer in my_sweet_home.resident:
@@ -96,3 +95,5 @@ for day in range(1, 366):
     for roomer in my_sweet_home.resident:
         print(roomer)
     print(my_sweet_home)
+
+# зачёт!

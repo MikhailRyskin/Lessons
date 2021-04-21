@@ -40,6 +40,10 @@ mother = Parent('Маша', 25)
 father.info()
 mother.info()
 baby = Baby('Петя', 2)
+
+# TODO, для добавления элементов в список класса father и mother
+#  Стоит создать у класса Parent, который будет принимать на вход объект класса Baby, проверять, является ли он Baby.
+#  и добавлять в список.
 father.children.append(baby)
 mother.children.append(baby)
 father.info()

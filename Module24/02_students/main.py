@@ -23,5 +23,9 @@ for name in names:
 student_list = []
 for student in students:
     student_list.append((student.average_score, student.name, student.group_number))
+
+
+# TODO, Если переменную цикла используем в коде, её необходимо назвать так, чтобы название отражало суть содержания.
+#  "i" не отражает. "i" это же студент? =)
 for i in sorted(student_list):
     print(f'студент {i[1]} группа {i[2]} средний балл {i[0]}')

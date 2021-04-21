@@ -48,5 +48,6 @@ class Gardener:
         self.garden.grow_garden()
 
     def harvest(self):
+        # TODO,
         self.garden = []
         print(f'садовник {self.name} собрал урожай')

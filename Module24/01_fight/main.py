@@ -7,6 +7,9 @@ class Warrior:
         self.number = number
         self.health = 100
 
+    # TODO, по идее, этот метод должен принимать на вход объект Warrior
+    #  Проверять, является ли он объектом класса Warrior и наносить урон ему, а не себе.
+    #  Давайте немного поправим.
     def action(self, attack):
         if attack:
             print(f'Атаковал воин {self.number}')
