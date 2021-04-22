@@ -8,12 +8,17 @@ class Parent:
     def info(self):
         print(f'Имя: {self.name}, возраст: {self.age}', end=' ')
         if self.children:
-            print('дети:', end='')
+            print('дети:', end=' ')
             for baby in self.children:
                 print(baby.name, end=' ')
             print()
         else:
             print('детей нет')
+
+    def add_baby(self, baby):
+        if isinstance(baby, Baby):
+            self.children.append(baby)
+            print(f'у {self.name} появился ребёнок {baby.name}')
 
     def calm_baby(self, baby):
         baby.calm = True
@@ -41,11 +46,11 @@ father.info()
 mother.info()
 baby = Baby('Петя', 2)
 
-# TODO, для добавления элементов в список класса father и mother
+#  для добавления элементов в список класса father и mother
 #  Стоит создать у класса Parent, который будет принимать на вход объект класса Baby, проверять, является ли он Baby.
 #  и добавлять в список.
-father.children.append(baby)
-mother.children.append(baby)
+father.add_baby(baby)
+mother.add_baby(baby)
 father.info()
 mother.info()
 baby.info()

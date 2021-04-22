@@ -19,12 +19,13 @@ class Circle:
         self.p = 2 * math.pi * self.r
 
     def is_intersect(self, other):
-        # TODO, стоит добавить проверку, что элемент является объектом класса Круг.
+        #  стоит добавить проверку, что элемент является объектом класса Круг.
         #  Ведь в противном случае, он может не иметь аргументов "x" и "y"
-        if math.sqrt((other.x - self.x) ** 2 + (other.y - self.y) ** 2) <= self.r + other.r:
-            print('Окружности пересекаются')
-        else:
-            print('Окружности не пересекаются')
+        if isinstance(other, Circle):
+            if math.sqrt((other.x - self.x) ** 2 + (other.y - self.y) ** 2) <= self.r + other.r:
+                print('Окружности пересекаются')
+            else:
+                print('Окружности не пересекаются')
 
 
 circle_1 = Circle(1, 2, 1)

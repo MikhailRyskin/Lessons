@@ -8,4 +8,4 @@ our_gardener.harvest()
 
 print(garden.potato_list)
 
-# TODO, таким образом, на грядке осталась картошка. Предлагаю в методе harvest изменять элемент класса PotatoGarden.
+#  таким образом, на грядке осталась картошка. Предлагаю в методе harvest изменять элемент класса PotatoGarden.

@@ -7,27 +7,27 @@ class Warrior:
         self.number = number
         self.health = 100
 
-    # TODO, по идее, этот метод должен принимать на вход объект Warrior
+    #  по идее, этот метод должен принимать на вход объект Warrior
     #  Проверять, является ли он объектом класса Warrior и наносить урон ему, а не себе.
     #  Давайте немного поправим.
-    def action(self, attack):
-        if attack:
+    def attack(self, unit):
+        if isinstance(unit, Warrior):
             print(f'Атаковал воин {self.number}')
-        else:
-            self.health -= 20
-            print(f'У воина {self.number} осталось {self.health} здоровья')
+            unit.health -= 20
+            print(f'У воина {unit.number} осталось {unit.health} здоровья')
 
 
-choice_list = [True, False]
 unit_1 = Warrior(1)
 unit_2 = Warrior(2)
 lap = 0
 while unit_1.health > 0 and unit_2.health > 0:
     lap += 1
     print(f'Раунд {lap}')
-    choice = random.choice(choice_list)
-    unit_1.action(choice)
-    unit_2.action(not choice)
+    choice = random.randint(1, 2)
+    if choice == 1:
+        unit_1.attack(unit_2)
+    else:
+        unit_2.attack(unit_1)
     print('_' * 20)
 print(f'Игра окончена')
 if unit_1.health > 0:
