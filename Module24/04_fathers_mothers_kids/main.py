@@ -57,3 +57,5 @@ baby.info()
 mother.feed_baby(baby)
 father.calm_baby(baby)
 baby.info()
+
+# зачёт!

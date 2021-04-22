@@ -9,3 +9,5 @@ our_gardener.harvest()
 print(garden.potato_list)
 
 #  таким образом, на грядке осталась картошка. Предлагаю в методе harvest изменять элемент класса PotatoGarden.
+
+# зачёт!

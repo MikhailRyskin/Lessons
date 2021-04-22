@@ -36,3 +36,5 @@ circle_1.is_intersect(circle_2)
 circle_1.increase(5)
 circle_1.print_info()
 circle_1.is_intersect(circle_2)
+
+# зачёт!
