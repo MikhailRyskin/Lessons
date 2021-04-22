@@ -47,8 +47,12 @@ class Gardener:
         self.garden.grow_garden()
 
     def harvest(self):
-        # TODO, было бы правильней садовнику проверять в цикле, если картошка готова, то собирать её. (убирать из списка)
+        # было бы правильней садовнику проверять в цикле, если картошка готова, то собирать её. (убирать из списка)
         #  Сейчас образом создаём новый пустой список.
         #  Если один из элементов не будет готов, его тоже удалим. Не совсем правильно.
-        self.garden.potato_list = []
+        not_ripe_potato = []
+        for potato in self.garden.potato_list:
+            if not potato.is_ripe():
+                not_ripe_potato.append(potato)
+        self.garden.potato_list = not_ripe_potato
         print(f'садовник {self.name} собрал урожай')
