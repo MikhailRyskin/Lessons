@@ -20,6 +20,9 @@ class House:
             self.food, self.money, self.dirt, self.cat_food
         )
 
+    def act(self):
+        self.dirt += 5
+
 
 class Man:
 
@@ -61,9 +64,11 @@ class Man:
     def act(self):
         if self.house.dirt > 90:
             self.happiness -= 10
-        self.house.dirt += 5
-        # TODO, предлагаю создать метода act у дома и прибавлять грязь в нём.
-
+        if self.fullness <= 0 or self.happiness < 10:
+            cprint('{} умер...'.format(self.name), color='red')
+            return
+        # self.house.dirt += 5
+        # предлагаю создать метода act у дома и прибавлять грязь в нём.
 
 
 class Husband(Man):
@@ -73,11 +78,8 @@ class Husband(Man):
 
     def act(self):
         super().act()
-        # TODO, Предлагаю перенести проверку остался ли человек жив или нет в метод act человека.
+        #  Предлагаю перенести проверку остался ли человек жив или нет в метод act человека.
         #  Это позволит сократить количество повторяющегося кода в классах.
-        if self.fullness <= 0 or self.happiness < 10:
-            cprint('{} умер...'.format(self.name), color='red')
-            return
         dice = randint(1, 6)
         if self.fullness <= 20:
             self.eat(30)
@@ -109,9 +111,6 @@ class Wife(Man):
 
     def act(self):
         super().act()
-        if self.fullness <= 0 or self.happiness < 10:
-            cprint('{} умер...'.format(self.name), color='red')
-            return
         dice = randint(1, 3)
         if self.fullness < 30:
             self.eat(30)
@@ -197,7 +196,7 @@ class Cat:
     def tear_up_wallpaper(self):
         cprint('Кот драл обои!', color='yellow')
         self.fullness -= 10
-        self.house.dirt += 5
+        self.house.act()
 
     def act(self):
         if self.fullness <= 0:
@@ -218,7 +217,7 @@ class Child(Man):
         return 'Ребёнок - ' + super().__str__()
 
     def act(self):
-        self.house.dirt += 5
+        # self.house.dirt += 5
         if self.fullness <= 0:
             cprint('{} умер...'.format(self.name), color='red')
             return
@@ -254,6 +253,7 @@ for day in range(1, 366):
     cprint('================== День {} =================='.format(day), color='magenta')
     for roomer in my_sweet_home.resident:
         roomer.act()
+    my_sweet_home.act()
     cprint('---------------- в конце дня ----------------', color='magenta')
     for roomer in my_sweet_home.resident:
         print(roomer)
