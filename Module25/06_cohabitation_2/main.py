@@ -66,7 +66,9 @@ class Man:
             self.happiness -= 10
         if self.fullness <= 0 or self.happiness < 10:
             cprint('{} умер...'.format(self.name), color='red')
-            return
+            return False
+        else:
+            return True
         # self.house.dirt += 5
         # предлагаю создать метода act у дома и прибавлять грязь в нём.
 
@@ -77,24 +79,23 @@ class Husband(Man):
         return 'Муж - ' + super().__str__()
 
     def act(self):
-        super().act()
-        # TODO, таким образом, если человек умрёт, то действия в этом методе продолжатся.
+        if super().act():
+        # таким образом, если человек умрёт, то действия в этом методе продолжатся.
         #  Предлагаю возвращать в супер методе True или False и исходя из этого производить действия в этом методе.
-
 
         #  Предлагаю перенести проверку остался ли человек жив или нет в метод act человека.
         #  Это позволит сократить количество повторяющегося кода в классах.
-        dice = randint(1, 6)
-        if self.fullness <= 20:
-            self.eat(30)
-        elif self.house.money < 60:
-            self.work()
-        elif dice == 1 or dice == 2:
-            self.gaming()
-        elif dice == 3:
-            self.petting_cat(self.house.house_cat)
-        else:
-            self.work()
+            dice = randint(1, 6)
+            if self.fullness <= 20:
+                self.eat(30)
+            elif self.house.money < 60:
+                self.work()
+            elif dice == 1 or dice == 2:
+                self.gaming()
+            elif dice == 3:
+                self.petting_cat(self.house.house_cat)
+            else:
+                self.work()
 
     def work(self):
         self.fullness -= 10
@@ -114,20 +115,20 @@ class Wife(Man):
         return 'Жена - ' + super().__str__()
 
     def act(self):
-        super().act()
-        dice = randint(1, 3)
-        if self.fullness < 30:
-            self.eat(30)
-        elif self.house.food <= 60:
-            self.shopping()
-        elif self.house.dirt > 100:
-            self.clean_house()
-        elif self.house.cat_food <= 20:
-            self.buying_cat_food()
-        elif dice == 1:
-            self.buy_fur_coat()
-        else:
-            self.petting_cat(self.house.house_cat)
+        if super().act():
+            dice = randint(1, 3)
+            if self.fullness < 30:
+                self.eat(30)
+            elif self.house.food <= 60:
+                self.shopping()
+            elif self.house.dirt > 100:
+                self.clean_house()
+            elif self.house.cat_food <= 20:
+                self.buying_cat_food()
+            elif dice == 1:
+                self.buy_fur_coat()
+            else:
+                self.petting_cat(self.house.house_cat)
 
     def shopping(self):
         self.fullness -= 10
