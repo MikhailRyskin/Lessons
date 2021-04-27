@@ -42,3 +42,5 @@ if money < tax:
     print('Вам не хватает', tax - money)
 else:
     print('Денег хватает')
+
+# зачёт!
