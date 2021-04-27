@@ -62,6 +62,8 @@ class Man:
         if self.house.dirt > 90:
             self.happiness -= 10
         self.house.dirt += 5
+        # TODO, предлагаю создать метода act у дома и прибавлять грязь в нём.
+
 
 
 class Husband(Man):
@@ -71,6 +73,8 @@ class Husband(Man):
 
     def act(self):
         super().act()
+        # TODO, Предлагаю перенести проверку остался ли человек жив или нет в метод act человека.
+        #  Это позволит сократить количество повторяющегося кода в классах.
         if self.fullness <= 0 or self.happiness < 10:
             cprint('{} умер...'.format(self.name), color='red')
             return

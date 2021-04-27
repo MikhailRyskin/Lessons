@@ -61,3 +61,5 @@ bus_9.get_off_bus(12)
 print(bus_9)
 bus_9.move(100)
 print(bus_9)
+
+# зачёт!

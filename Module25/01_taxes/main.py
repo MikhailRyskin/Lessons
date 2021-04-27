@@ -35,7 +35,8 @@ elif property_choice == 2:
     tax_object = Car(worth_object)
 elif property_choice == 3:
     tax_object = CountryHouse(worth_object)
-tax_object.culc_tax()
+tax_object.culc_tax()  # TODo, пока что, в названии методе есть опечатка
+
 tax = tax_object.tax
 if money < tax:
     print('Вам не хватает', tax - money)

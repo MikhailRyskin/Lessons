@@ -53,3 +53,5 @@ with open('karma.log', 'w+', encoding='utf8') as log_file:
         day += 1
 
 print(f'день {day}, карма {total_carma}!!!')
+
+# зачёт!

@@ -52,3 +52,5 @@ persons = [Manager('Андрей', 'Лунёв', 29), Manager('Михаил', '�
 for person in persons:
     person.salary_calc()
     print(person)
+
+# зачёт!
