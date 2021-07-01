@@ -1,9 +1,9 @@
 from collections.abc import Iterable
 
-
 list_1 = [2, 5, 7, 10]
 list_2 = [3, 8, 4, 9]
 to_find = 56
+
 
 # can_continue = True
 # for x in list_1:
@@ -31,3 +31,5 @@ def my_generator(list_1: list, list_2: list, to_find: int) -> Iterable:
 gen = my_generator(list_1, list_2, to_find)
 for x, y, result in gen:
     print(x, y, result)
+
+# зачёт!
