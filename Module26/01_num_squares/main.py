@@ -38,3 +38,5 @@ print()
 generator = (num ** 2 for num in range(1, input_range + 1))
 for num in generator:
     print(num, end=' ')
+
+# зачёт!

@@ -13,8 +13,11 @@ dir_name = '03_lucky_number'
 #  os.walk отличный вариант =)
 #  нам необходимо написать свою функцию на подобии os.walk. Которая будет рекурсивно обходить директории
 #  и возвращать названия директорий, которые встречает на своём пути.
-# TODO вообще-то нигде в задании не сказано, что нельзя использовать os.walk.
+#  вообще-то нигде в задании не сказано, что нельзя использовать os.walk.
 #  Попробовал сделать, без yield находит папку, с yield не работает. В чём ошибка?
+
+# В случае, использования os.walk пропадает суть задания. Наша цель, научиться писать код. =)
+
 
 # def files_path_generator(start_dir: str, dir_to_find: str) -> Iterable:
 #     for dir_path, dir_names, file_names in os.walk(start_dir):
@@ -38,11 +41,15 @@ def dir_path_generator(start_dir: str, dir_to_find: str):
         if elem.startswith('.'):
             continue
         elem_path = os.path.join(start_dir, elem)
+        # TODO, если elem_path это файл, стоит вернуть elem_path при помощи yield.
         if os.path.isdir(elem_path):
             print(elem_path)
             # yield elem_path
+            # TODO, стоит реализовать цикл по возврату вызова функции ниже.
+            #  Можно попробовать вместо range в цикле, использовать вызов нашей функции.
+            #  Каждый элемент такого цикла стоит вернуть при помощи yield
             dir_path_generator(elem_path, dir_to_find)
-    else:
+    else:  # TODO, блок else с возвратом получился лишним.
         return
 
 

@@ -17,16 +17,18 @@ def hof_seq(input_list: List[int], sequence_length: int) -> Iterable:
         if seq_index == 0 or seq_index == 1:
             seq_member = 1
         else:
-            seq_member = seq_list[seq_index - seq_list[seq_index - 1]]\
+            seq_member = seq_list[seq_index - seq_list[seq_index - 1]] \
                          + seq_list[seq_index - seq_list[seq_index - 2]]
         seq_list.append(seq_member)
         yield seq_member
         seq_index += 1
 
 
-start_list = [1, 3]
+start_list = [1, 1]
 number_members = 20
 hof = hof_seq(start_list, number_members)
 print(f'Последовательность Хофштадтера для {number_members} членов последовательности:')
 for elem in hof:
     print(elem, end=' ')
+
+# зачёт!

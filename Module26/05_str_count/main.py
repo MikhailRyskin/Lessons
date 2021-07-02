@@ -22,6 +22,7 @@ def str_count_generator(start_dir: str) -> Iterable:
                 number_str = str_count(full_file_path)
                 yield full_file_path, number_str
 
+
 #  начальную директорию стоит запрашивать у пользователя.
 #  Т.к. такая директория может отсутствовать на другом ПК.
 
@@ -39,3 +40,5 @@ for file in str_count_gen:
     files_count += 1
     lines_value += file[1]
 print(f'В папке {path_normalized} содержится питоновских файлов: {files_count}, всего строк кода {lines_value}.')
+
+# зачёт!
