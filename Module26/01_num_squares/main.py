@@ -6,7 +6,7 @@ class SquareIterator:
         self.counter = 0
         self.number = number
 
-    def __iter__(self) -> None:  # TODO, в данном случае, было бы правильней возвращать 'SquareIterator'
+    def __iter__(self) -> 'SquareIterator':  # в данном случае, было бы правильней возвращать 'SquareIterator'
         self.counter = 0
         return self
 

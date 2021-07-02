@@ -15,16 +15,19 @@ def str_count(file_path: str) -> int:
 def str_count_generator(start_dir: str) -> Iterable:
     for dir_path, dir_names, file_names in os.walk(start_dir):
         for file in file_names:
-            # TODO, если file текст, то , стоит проверять последние символы текста при помощи строкового метода .endswith()
+            #  если file текст, то , стоит проверять последние символы текста при помощи строкового метода .endswith()
             #  Методы оптимизированы для работы с текстом и должны работать быстрее, чем срезы =)
-            if file[-2:] == 'py':
+            if file.endswith('py'):
                 full_file_path = os.path.join(dir_path, file)
                 number_str = str_count(full_file_path)
                 yield full_file_path, number_str
 
-# TODO, начальную директорию стоит запрашивать у пользователя.
+#  начальную директорию стоит запрашивать у пользователя.
 #  Т.к. такая директория может отсутствовать на другом ПК.
-start_path = 'C:\Skillbox\PythonBasic\Lessons\Module25'
+
+
+# start_path = 'C:\Skillbox\PythonBasic\Lessons\Module25'
+start_path = input('Введите абсолютный путь начальноЙ директории: ')
 path_normalized = os.path.normpath(start_path)
 
 str_count_gen = str_count_generator(path_normalized)
