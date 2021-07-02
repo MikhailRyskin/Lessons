@@ -32,7 +32,7 @@ dir_name = '03_lucky_number'
 # for file_path in file_gen:
 #     print(file_path)
 
-def dir_path_generator(start_dir: str, dir_to_find: str):
+def dir_path_generator(start_dir: str, dir_to_find: str) -> Iterable:
     list_dir = os.listdir(start_dir)
     if dir_to_find in list_dir:
         print(f'Найдена папка {dir_to_find}')
@@ -41,20 +41,20 @@ def dir_path_generator(start_dir: str, dir_to_find: str):
         if elem.startswith('.'):
             continue
         elem_path = os.path.join(start_dir, elem)
-        # TODO, если elem_path это файл, стоит вернуть elem_path при помощи yield.
+        #  если elem_path это файл, стоит вернуть elem_path при помощи yield.
+        if os.path.isfile(elem_path):
+            yield elem_path
         if os.path.isdir(elem_path):
-            print(elem_path)
-            # yield elem_path
-            # TODO, стоит реализовать цикл по возврату вызова функции ниже.
+            #  стоит реализовать цикл по возврату вызова функции ниже.
             #  Можно попробовать вместо range в цикле, использовать вызов нашей функции.
             #  Каждый элемент такого цикла стоит вернуть при помощи yield
-            dir_path_generator(elem_path, dir_to_find)
-    else:  # TODO, блок else с возвратом получился лишним.
-        return
+            for cur_dir in dir_path_generator(elem_path, dir_to_find):
+                yield cur_dir
+
+    # else:  #  блок else с возвратом получился лишним.
+    #     return
 
 
-dir_path_generator(path_normalized, dir_name)
-
-# dir_gen = dir_path_generator(path_normalized, dir_name)
-# # for dir_path in dir_gen:
-# #     print(dir_path)
+dir_gen = dir_path_generator(path_normalized, dir_name)
+for dir_path in dir_gen:
+    print(dir_path)
