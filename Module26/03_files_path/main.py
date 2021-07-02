@@ -1,13 +1,11 @@
 import os
 from collections.abc import Iterable
 
+
 #  начальную директорию стоит запрашивать у пользователя.
 #  Т.к. такая директория может отсутствовать на другом ПК.
 
 # start_path = 'C:\Skillbox\PythonBasic\Lessons'
-start_path = input('Введите абсолютный путь начальноЙ директории: ')
-path_normalized = os.path.normpath(start_path)
-dir_name = '03_lucky_number'
 
 
 #  os.walk отличный вариант =)
@@ -55,6 +53,13 @@ def dir_path_generator(start_dir: str, dir_to_find: str) -> Iterable:
     #     return
 
 
+# пожалуйста, обратите внимание на перенос кода, сначала пишем функции и только потом остальной код.
+start_path = input('Введите абсолютный путь начальноЙ директории: ')
+path_normalized = os.path.normpath(start_path)
+dir_name = '03_files_path'
+
 dir_gen = dir_path_generator(path_normalized, dir_name)
 for dir_path in dir_gen:
     print(dir_path)
+
+# зачёт!
