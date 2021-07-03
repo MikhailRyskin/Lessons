@@ -11,12 +11,14 @@ def counter(func: Callable) -> Any:
     :param func:
     :return:
     """
+
     @functools.wraps(func)
     def wrapped_func(*args, **kwargs):
         res = func(*args, **kwargs)
         COUNT[func.__name__] += 1
         print(f'функция {func.__name__} вызывается в {COUNT[func.__name__]}-й раз')
         return res
+
     return wrapped_func
 
 
@@ -34,3 +36,5 @@ for num in range(6):
     print(test_1())
     if num % 2:
         print(test_2())
+
+# зачёт!

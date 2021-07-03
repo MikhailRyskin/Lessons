@@ -11,6 +11,7 @@ def logging(func: Callable) -> Any:
     :param func:
     :return:
     """
+
     @functools.wraps(func)
     def wrapped_func(*args, **kwargs):
         print(f'\nвыполняется функция: {func.__name__}{func.__doc__}')
@@ -21,6 +22,7 @@ def logging(func: Callable) -> Any:
             with open('function_errors.log', 'a', encoding='utf-8') as log_file:
                 log_str = f'функция:{func.__name__}, ошибка: {exc}, время:{datetime.datetime.now()}\n'
                 log_file.write(log_str)
+
     return wrapped_func
 
 
@@ -51,7 +53,7 @@ def test_3():
     :return:
     """
     a = 0
-    b = 10/a
+    b = 10 / a
     return b
 
 
@@ -71,3 +73,5 @@ print(test_1())
 print(test_2())
 print(test_3())
 print(test_4())
+
+# зачёт!

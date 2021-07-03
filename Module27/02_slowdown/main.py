@@ -9,11 +9,13 @@ def wait_3_sec(func: Callable) -> Any:
     :param func:
     :return:
     """
+
     @functools.wraps(func)
     def wrapped_func(*args, **kwargs):
         time.sleep(3)
         result = func(*args, **kwargs)
         return result
+
     return wrapped_func
 
 
@@ -26,3 +28,4 @@ print(time.time())
 test()
 print(time.time())
 
+# зачёт!

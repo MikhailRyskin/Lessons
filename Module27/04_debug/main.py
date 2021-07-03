@@ -8,6 +8,7 @@ def debug(func: Callable) -> Any:
     :param func:
     :return:
     """
+
     @functools.wraps(func)
     def wrapped_func(*args, **kwargs):
         args_kwargs = ','.join(f'"{str(elem)}"' for elem in args)
@@ -33,3 +34,4 @@ greeting("Том")
 greeting("Миша", age=100)
 greeting(name="Катя", age=16)
 
+# зачёт!
