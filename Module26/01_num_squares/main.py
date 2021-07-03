@@ -40,3 +40,4 @@ for num in generator:
     print(num, end=' ')
 
 # зачёт!
+# зачёт!
