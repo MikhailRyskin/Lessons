@@ -1,0 +1,2 @@
+функция:test_2, ошибка: can only concatenate str (not "int") to str, время:2021-07-03 17:30:07.277875
+функция:test_3, ошибка: division by zero, время:2021-07-03 17:30:07.278875
