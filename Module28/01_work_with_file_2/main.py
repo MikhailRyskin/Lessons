@@ -7,6 +7,7 @@ class File:
     При попытке открыть несуществующий файл, создаёт и открывает этот файл в режиме записи.
     Подавляются все исключения, связанные с файлами.
     """
+
     def __init__(self, name: str, mode: str) -> None:
         self.name = name
         self.mode = mode
@@ -33,3 +34,5 @@ with File('example1.txt', 'a') as file:
     file.write('Всем привет!\n')
     # raise TypeError
     # raise FileNotFoundError
+
+# зачёт!

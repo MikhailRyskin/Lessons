@@ -8,6 +8,8 @@ class MyMath(ABC):
     геометрических фигур.
     """
 
+    # TODO, предлагаю попробовать использовать в ряде методах декоратор @staticmethod.
+    #  В таком случае, cls будет лишним. =)
     @classmethod
     def circle_len(cls, radius: float) -> float:
         """
