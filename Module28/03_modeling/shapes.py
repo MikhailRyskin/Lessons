@@ -66,6 +66,7 @@ class Triangle:
         return self.square
 
 
+
 class Cube(Square):
     """
     Класс, описывающий куб. Задаётся стороной куба.
