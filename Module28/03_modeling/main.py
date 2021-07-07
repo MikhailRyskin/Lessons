@@ -1,6 +1,5 @@
 from shapes1 import Square, Triangle, Cube, Pyramid
 
-
 square_1 = Square(length=5)
 print(square_1.get_perimeter(), square_1.get_square())
 square_1.length = 7.87
@@ -17,3 +16,5 @@ print(cube_1.total_square())
 
 pyramid_1 = Pyramid(length=6, height=10)
 print(pyramid_1.total_square())
+
+# зачёт!
