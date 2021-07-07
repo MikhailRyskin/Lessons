@@ -36,3 +36,4 @@ with File('example1.txt', 'a') as file:
     # raise FileNotFoundError
 
 # зачёт!
+# зачёт!
