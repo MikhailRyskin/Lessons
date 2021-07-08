@@ -1,7 +1,6 @@
 from typing import Callable
 import functools
 
-
 app = {}
 
 
@@ -10,7 +9,9 @@ def callback(event: str) -> Callable:
         @functools.wraps(func)
         def wrapped_func(*args, **kwargs):
             app[event] = func
+
         return wrapped_func
+
     return call_decorator
 
 
@@ -39,3 +40,5 @@ else:
 #  Код из "Основной код", стоит скопировать в этот файл сразу =)
 #  При помощи "route = app.get('//')", мы получаем значение словаря по ключу "//".
 #  Т.к. значение, это функция, то стоит просто вызвать route как функцию.
+
+# зачёт!
