@@ -25,7 +25,6 @@ class B(A):
         result = 0
         for _ in range(number + 1):
             result += sum([i_num ** 2 for i_num in range(10000)])
-        result / 0
 
         return result
 
@@ -33,3 +32,5 @@ class B(A):
 my_obj = B()
 my_obj.test_sum_1()
 my_obj.test_sum_2()
+
+# зачёт!

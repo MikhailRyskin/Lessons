@@ -8,6 +8,7 @@ def check_permission(user_name: str) -> Callable:
     :param user_name: имя пользователя
     :return:
     """
+
     def check_decorator(func: Callable) -> Callable:
         @functools.wraps(func)
         def wrapped_func(*args, **kwargs):
@@ -15,9 +16,12 @@ def check_permission(user_name: str) -> Callable:
                 result = func(*args, **kwargs)
                 return result
             else:
-                # raise PermissionError(f'У пользователя недостаточно прав, чтобы выполнить функцию {func.__name__}')
-                print(f'PermissionError: У пользователя недостаточно прав, чтобы выполнить функцию {func.__name__}')
+                raise PermissionError(f'У пользователя недостаточно прав, чтобы выполнить функцию {func.__name__}')
+                # разкомментировал нужную часть =)
+                # print(f'PermissionError: У пользователя недостаточно прав, чтобы выполнить функцию {func.__name__}')
+
         return wrapped_func
+
     return check_decorator
 
 
@@ -36,3 +40,5 @@ def add_comment():
 
 delete_site()
 add_comment()
+
+# зачёт!

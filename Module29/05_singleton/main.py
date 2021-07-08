@@ -19,6 +19,7 @@ def singleton(cls):
             instance = cls(*args, **kwargs)
             first_instance[cls.__name__] = instance
         return instance
+
     return wrapper
 
 
@@ -45,3 +46,5 @@ print(id(obj_2))
 obj_3 = ExampleNew()
 print(id(obj_2))
 print(obj_1 is obj_3)
+
+# зачёт!
