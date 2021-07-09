@@ -15,5 +15,8 @@ def main():
     print(round(time.time() - start_time, 9))
 
 
+# TODO, пожалуйста, обратите внимание, в данном задании, все варианты стоит реализовать внутри метода timeit модуля timeit. =)
+
+
 if __name__ == '__main__':
     main()

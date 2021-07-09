@@ -49,3 +49,5 @@ if __name__ == '__main__':
     prime_numbers_list = list(filter(lambda num: all(num % n != 0 for n in range(2, num // 2 + 1)),
                                      [num for num in range(2, range_1 + 1)]))
     print(*prime_numbers_list)
+
+# зачёт!

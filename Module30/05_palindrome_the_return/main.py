@@ -35,7 +35,6 @@ def can_be_poly(in_str: str) -> bool:
 
 
 if __name__ == '__main__':
-
     str_1 = 'aadsdfggagf'
 
     print(is_poly(str_1))
@@ -45,3 +44,5 @@ if __name__ == '__main__':
 
     print(is_poly(str_2))
     print(can_be_poly(str_2))
+
+# зачёт!

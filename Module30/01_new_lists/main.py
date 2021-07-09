@@ -12,3 +12,5 @@ if __name__ == '__main__':
     print(new_names)
     product_numbers: int = reduce(lambda a, b: a * b, numbers)
     print(product_numbers)
+
+# зачёт!
