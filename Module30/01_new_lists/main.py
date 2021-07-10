@@ -14,3 +14,4 @@ if __name__ == '__main__':
     print(product_numbers)
 
 # зачёт!
+# зачёт!
