@@ -2,7 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 import re
 
-
 if __name__ == '__main__':
     my_res = requests.get('http://www.columbia.edu/~fdc/sample.html')
 
@@ -21,7 +20,8 @@ if __name__ == '__main__':
         list_h3 = re.findall(r'>(.+)</h3>', html_doc_1)
         print(list_h3)
 
-
 #  пожалуйста, обратите внимание, цикл со списком h3_text и срезами получился лишним.
 #  Стоит подобрать регулярное выражение таким образом, чтобы findall вернул нам список нужных значений.
 #  Остальной код предлагаю из решения убрать =)
+
+# зачёт!
