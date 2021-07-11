@@ -6,17 +6,19 @@ def main():
     all_deaths_response = requests.get('https://www.breakingbadapi.com/api/deaths/')
     all_deaths = json.loads(all_deaths_response.text)
 
-    max_episode_all = {}
-    max_deaths = 0
+    # max_episode_all = {}
+    # max_deaths = 0
 
-    # TODO, предлагаю упростить выборку словаря с максимальным количеством смертей.
+    #  предлагаю упростить выборку словаря с максимальным количеством смертей.
     #  Стоит передать список словарей deaths в функцию max, если в параметр key функции передать lambda функцию,
     #  То, сможет найти словарь с максимальным значением по интересующему нас ключу в одну строку кода.
 
-    for episode in all_deaths:
-        if episode['number_of_deaths'] > max_deaths:
-            max_deaths = episode['number_of_deaths']
-            max_episode_all = episode
+    # for episode in all_deaths:
+    #     if episode['number_of_deaths'] > max_deaths:
+    #         max_deaths = episode['number_of_deaths']
+    #         max_episode_all = episode
+
+    max_episode_all = max(all_deaths, key=lambda x: x['number_of_deaths'])
 
     max_deaths_episode = {
         'death_id': max_episode_all['death_id'],
