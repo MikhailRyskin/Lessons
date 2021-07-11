@@ -1,6 +1,5 @@
 import re
 
-
 if __name__ == '__main__':
     plates = 'А578ВЕ777 ОР233787 К901МН666 СТ46599 СНИ2929П777 666АМР666'
 
@@ -11,3 +10,5 @@ if __name__ == '__main__':
     taxi = re.findall(taxi_pattern, plates)
     print('Список номеров частных автомобилей:', private_cars)
     print('Список номеров такси:', taxi)
+
+# зачёт!

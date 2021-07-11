@@ -9,6 +9,10 @@ def main():
     max_episode_all = {}
     max_deaths = 0
 
+    # TODO, предлагаю упростить выборку словаря с максимальным количеством смертей.
+    #  Стоит передать список словарей deaths в функцию max, если в параметр key функции передать lambda функцию,
+    #  То, сможет найти словарь с максимальным значением по интересующему нас ключу в одну строку кода.
+
     for episode in all_deaths:
         if episode['number_of_deaths'] > max_deaths:
             max_deaths = episode['number_of_deaths']

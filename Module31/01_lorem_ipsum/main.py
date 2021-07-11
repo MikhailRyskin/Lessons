@@ -10,3 +10,5 @@ if __name__ == '__main__':
     re_pattern = re.compile(r'\b\w{4}\b')
     result = re.findall(re_pattern, text)
     print(result)
+
+# зачёт!
